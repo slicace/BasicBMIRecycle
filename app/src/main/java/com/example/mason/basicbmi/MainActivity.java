@@ -1,5 +1,6 @@
 package com.example.mason.basicbmi;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button nxtBtn = (Button) findViewById(R.id.nextBtn);
         Button addBtn = (Button) findViewById(R.id.AddBtn);
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,12 +24,25 @@ public class MainActivity extends AppCompatActivity {
                 EditText secondNumEditText = (EditText) findViewById(R.id.secondNumber);
                 TextView resultTextView = (TextView) findViewById(R.id.resultsView);
 
-                double  num1 = Integer.parseInt(firstNumEditText.getText().toString());
-                double  num2 = Integer.parseInt(secondNumEditText.getText().toString());
+                double  num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                double  num2 = Double.parseDouble(secondNumEditText.getText().toString());
                 double  bmiResult = num1/Math.pow(num2, 2) * 703;
+
                 bmiResult = Math.round(bmiResult*10.0)/10.;
-                resultTextView.setText(bmiResult +"");
+                resultTextView.setText(bmiResult +" ");
             }
         });
+
+        nxtBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 openActivity();
+            }
+        });
+    }
+
+    public void openActivity(){
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 }
