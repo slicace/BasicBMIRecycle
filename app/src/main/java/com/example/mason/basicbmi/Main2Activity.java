@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -16,10 +17,9 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("mylist");
 
         Button bckbtn = (Button)findViewById(R.id.backBtn);
-
-
 
         bckbtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BasicBMI.iml" filepath="$PROJECT_DIR$/BasicBMI.iml" />
+      <module fileurl="file://C:\Users\Mason\AndroidStudioProjects\BasicBMIClone\BasicBMI.iml" filepath="C:\Users\Mason\AndroidStudioProjects\BasicBMIClone\BasicBMI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BasicBMIClone.iml" filepath="$PROJECT_DIR$/.idea/BasicBMIClone.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
