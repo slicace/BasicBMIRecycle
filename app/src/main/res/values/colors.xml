@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorCyanite">#0abde3</color>
+    <color name="JoistBlue">#54a0ff</color>
+    <color name="LightBlueBallerina">#c8d6e5</color>
+    <color name="FlashWhite">#f1f2f6</color>
+    <color name="Transparent">#00000000</color>
+    <color name="underweight">#f1f2f6</color>
+    <color name="normalweight">#2ed573</color>
+    <color name="overweight">#ff7f50</color>
+    <color name="obese">#ff4757</color>
 </resources>

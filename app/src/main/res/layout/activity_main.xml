@@ -4,119 +4,171 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5f6fa"
     tools:context="com.example.mason.basicbmi.MainActivity">
 
-    <TextView
-        android:id="@+id/bmiCalc"
-        android:layout_width="176dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="8dp"
-        android:text="Bmi Calculator"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/firstNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Enter  weight in LBS"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmiCalc"
-        app:layout_constraintVertical_bias="0.029" />
 
-    <Button
-        android:id="@+id/AddBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calclulate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
 
-    <TextView
-        android:id="@+id/resultsView"
-        android:layout_width="112dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="108dp"
-        android:layout_marginTop="8dp"
-        android:text="Results"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddBtn"
-        app:layout_constraintVertical_bias="0.377" />
 
-    <EditText
-        android:id="@+id/secondNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Enter height in inches"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/AddBtn"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstNumber"
-        app:layout_constraintVertical_bias="0.255" />
 
-    <TextView
-        android:id="@+id/Weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="80dp"
-        android:text="Weight"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/firstNumber"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Height"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="180dp"
-        android:text="Height"
-        app:layout_constraintEnd_toStartOf="@+id/secondNumber"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/JoistBlue"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/circleresult"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/circleprac"
+                android:background="@color/JoistBlue" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/resultsView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Hello"
+                android:textColor="@color/FlashWhite" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@color/FlashWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:gravity="center"
+                        android:textColor="@color/JoistBlue"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="N/A"
+                        android:textColorHint="@color/JoistBlue"
+                        android:background="@color/Transparent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/numWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Weight"
+                        android:inputType="number"
+                        android:textColor="@color/JoistBlue"
+                        android:textColorHint="@color/JoistBlue"
+                        android:background="@color/Transparent"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/JoistBlue"
+                        android:text="Pounds"
+                        android:textStyle="normal"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:gravity="center"
+                        android:textColor="@color/JoistBlue"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/JoistBlue"
+                        android:hint="Height"
+                        android:id="@+id/numHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:background="@color/Transparent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/JoistBlue"
+                        android:text="inches"
+                        android:textStyle="normal"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/JoistBlue"
+            android:text="InformationInformationInformation" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/nextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:layout_marginRight="24dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/whiteplus"
+        app:backgroundTint="@color/JoistBlue"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:layout_marginLeft="264dp" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
